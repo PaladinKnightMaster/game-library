@@ -23,8 +23,9 @@
       <div class="game-description">
         <p class="game-name">{{game.name}}</p>
         <div class="game-platforms">
+          <!-- .slug is not drilling in correctly -->
           <img *ngFor="let gamePlatform of game.parent_platforms" class="game-platform"
-            src="assets/images/platforms/{{gamePlatform.platform.slug}}.svg" alt="{{gamePlatform.platform.slug}}">
+            src="assets/images/platforms/{{ gamePlatform.platform}}.svg" alt="{{ gamePlatform.platform }}" />
         </div>
       </div>
     </div>
